@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tutorial",
+    "name": "Goal App",
     "slug": "tutorial",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,7 +17,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.kathir2k03.tutorial"
     },
     "web": {
       "output": "static",
@@ -39,6 +40,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5391afce-330d-4280-92a9-3b5d9384c9c0"
+      }
     }
   }
 }

@@ -7,7 +7,11 @@ const List = (props) => {
         data={props.lists}
         keyExtractor={(_, index) => index.toString()}
         renderItem={({ item, index }) => (
-          <Pressable onPress={() => props.removeGoal(index)}>
+          <Pressable
+            onPress={() => props.removeGoal(index)}
+            style={({ pressed }) => pressed && styles.rippleEffect}
+            android_ripple={{ color: "#000000", backgroundColor: "#ffffff" }}
+          >
             <Text style={styles.goalListText}>{item}</Text>
           </Pressable>
         )}
@@ -22,12 +26,16 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   goalListText: {
-    backgroundColor: "#800080",
+    backgroundColor: "#f31282",
     borderRadius: 5,
     color: "#ffffff",
-    padding: 10,
+    padding: 15,
     borderWidth: 1,
-    marginVertical: 5,
+    marginVertical: 15,
+    fontSize: 16,
+  },
+  rippleEffect: {
+    opacity: 0.7,
   },
 });
 
